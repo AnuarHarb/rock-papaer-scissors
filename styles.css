@@ -1,0 +1,27 @@
+.pick {
+  border: 5px solid gray;
+  cursor: pointer;
+  display: inline-block;
+  height: 150px;
+  width: 80px;
+  vertical-align: top;
+}
+
+.pick img {
+  width: 100%;
+}
+
+.pick:hover {
+  border-color: lightgreen;
+  transform: scale(1.1);
+}
+
+input {
+  display: none;
+}
+
+.result-section {
+  background-color: orange;
+  padding: 20px;
+  display: none;
+}
