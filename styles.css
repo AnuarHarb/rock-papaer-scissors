@@ -1,10 +1,22 @@
+:root {
+  --background-color: #C0BABC;
+  --background2-color: #C7AC92;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .pick {
   border: 5px solid gray;
   cursor: pointer;
   display: inline-block;
-  height: 150px;
   width: 80px;
   vertical-align: top;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
 }
 
 .pick img {
@@ -12,7 +24,7 @@
 }
 
 .pick:hover {
-  border-color: lightgreen;
+  border-color: lightblue;
   transform: scale(1.1);
 }
 
@@ -22,6 +34,34 @@ input {
 
 .result-section {
   background-color: orange;
-  padding: 20px;
+  height: 100vh;
+  width: 100vw;
   display: none;
+}
+
+.play-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
+
+
+.select-section {
+  background-image: linear-gradient(var(--background-color), var(--background2-color));
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
 }

@@ -7,23 +7,29 @@
 </head>
 <body>
 
-  <form id="game-form">
-    <label class="pick" for="paper-input">
-      <img src="images/papel.png" alt="papel">
-      <h3>Papel</h3>
-    </label>
-    <input id="paper-input" name="selection" type="radio" value="papel">
+  <section class="select-section">
+    <form id="game-form">
+      <label class="pick" for="paper-input" onclick="iniciarJuego('papel')">
+        <img src="images/papel.png" alt="papel">
+        <h3>Papel</h3>
+      </label>
+      <input id="paper-input" name="selection" type="radio" value="papel">
 
-    <label class="pick" for="rock-input">Piedra</label>
-    <input id="rock-input" name="selection" type="radio" value="piedra">
+      <label class="pick" for="rock-input">
+        <img src="images/piedra.png" alt="piedra">
+        <h3>Piedra</h3>
+      </label>
+      <input id="rock-input" name="selection" type="radio" value="piedra">
 
-    <label class="pick" for="scissors-input">Tijeras</label>
-    <input id="scissors-input" name="selection" type="radio" value="tijeras">
-  </form>
+      <label class="pick" for="scissors-input">
+        <img src="images/espada.png" alt="espada">
+        <h3>Tijeras</h3>
+      </label>
+      <input id="scissors-input" name="selection" type="radio" value="tijeras">
+    </form>
 
-  <button onclick="iniciarJuego()" >Guardar</button>
-
-
+    <button class="play-button" onclick="iniciarJuego()">Jugar</button>
+  </section>
 
   <section class="result-section">
     <h2 class="winner"></h2>
