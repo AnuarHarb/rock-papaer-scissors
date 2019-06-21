@@ -7,6 +7,8 @@ const gameForm = document.querySelector('#game-form');
 const winner = document.querySelector('.winner');
 const player1Pick = document.querySelector('.player1-pick');
 const player2Pick = document.querySelector('.player2-pick');
+const player1Img = document.querySelector('.player1-img');
+const player2Img = document.querySelector('.player2-img');
 // Sections
 const selectSection = document.querySelector('.select-section');
 const resultSection = document.querySelector('.result-section');
@@ -44,7 +46,7 @@ function versus(player1, player2) {
       }
   } else {
     return {
-      winner: 'none',
+      winner: 'Empate',
       player1Pick: player1,
       player2Pick: player2
     }
@@ -55,6 +57,8 @@ function printWinner(winnerInfo) {
   selectSection.style.display = 'none';
   resultSection.style.display = 'block';
   winner.innerText = 'ganó ' + winnerInfo.winner;
-  player1Pick.innerText = 'player1: ' + winnerInfo.player1Pick;
-  player2Pick.innerText = 'player2: ' + winnerInfo.player2Pick;
+  player1Pick.innerText = winnerInfo.player1Pick;
+  player2Pick.innerText = winnerInfo.player2Pick;
+  player1Img.src = 'images/' + winnerInfo.player1Pick + '.png';
+  player2Img.src = 'images/' + winnerInfo.player2Pick + '.png';
 }

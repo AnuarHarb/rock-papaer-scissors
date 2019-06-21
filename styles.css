@@ -65,3 +65,41 @@ form {
   justify-content: space-around;
   margin-bottom: 40px;
 }
+
+.result-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.result-title h2 {
+  font-size: 70px;
+}
+
+.result-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.result-content img {
+  width: 300px;
+}
+
+.result-player {
+  padding: 20px;
+  border: 5px solid gray;
+}
+
+.result-player h3 {
+  font-size: 30px;
+}
+
+.result-player p {
+  font-size: 50px;
+}
+
+.player1-img,
+.player2-img {
+  width: 200px;
+}
