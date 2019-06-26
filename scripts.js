@@ -3,7 +3,11 @@
 
 
 // Buscar los elementos de DOM
+// Form
 const gameForm = document.querySelector('#game-form');
+const labels = document.querySelectorAll('.pick');
+
+// Result section
 const winner = document.querySelector('.winner');
 const player1Pick = document.querySelector('.player1-pick');
 const player2Pick = document.querySelector('.player2-pick');
@@ -13,7 +17,24 @@ const player2Img = document.querySelector('.player2-img');
 const selectSection = document.querySelector('.select-section');
 const resultSection = document.querySelector('.result-section');
 
+//audio tags
+const audioHover = document.querySelector('#audio-hover');
+const marioSong = document.querySelector('#mario-song');
+
+// Resaltar la opcion seleccionada
+for(let element of labels) {
+  element.addEventListener('click', function() {
+    for(let label of labels) {
+      label.classList.remove('active');
+    }
+    element.classList.add('active');
+  })
+}
+
 function iniciarJuego() {
+  audioHover.pause();
+  audioHover.currentTime = 0;
+  audioHover.play();
   const computerSelection = computerPick();
   const playerSelection = gameForm.selection.value; // piedra, papel trijeras
   const winnerInfo = versus(playerSelection, computerSelection);

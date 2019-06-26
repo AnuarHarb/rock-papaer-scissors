@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+  <button>Sound</button>
   <section class="select-section">
     <form id="game-form">
-      <label class="pick" for="paper-input" onclick="iniciarJuego('papel')">
+      <label class="pick" for="paper-input">
         <img src="images/papel.png" alt="papel">
         <h3>Papel</h3>
       </label>
@@ -22,7 +22,7 @@
       <input id="rock-input" name="selection" type="radio" value="piedra">
 
       <label class="pick" for="scissors-input">
-        <img src="images/espada.png" alt="espada">
+        <img src="images/tijeras.png" alt="espada">
         <h3>Tijeras</h3>
       </label>
       <input id="scissors-input" name="selection" type="radio" value="tijeras">
@@ -49,6 +49,13 @@
       </article>
     </div>
   </section>
+
+  <audio id="audio-hover" src="audios/hover.mp3"></audio>
+  <audio src="audios/mario-coin.mp3"></audio>
+  <audio id="mario-song" src="audios/song.mp3"></audio>
+
+  <video src=""></video>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Kf7tf9_PghM?autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
   <script src="scripts.js"></script>
